@@ -55,4 +55,64 @@ public class Iterador {
         System.out.println("");
         this.proximo();
     }
+
+    // Inserir após o atual
+    public void inserirAposAtual(int valor) {
+        No noAux = this.atual.proximo;
+        No no = new No(valor);
+        
+        no.anterior = this.atual;
+
+        if (noAux != null) {
+            no.proximo = noAux;
+            noAux.anterior = no;
+        }
+
+        this.atual.proximo = no;
+        this.lista.tamanho++;
+    }
+
+    // Remover após o atual
+    public void removerAposAtual() {
+        No noAux = this.atual.proximo;
+
+        if (noAux == null) {
+            System.out.println("Nao ha nenhum no apos este!");
+            return;
+        }
+
+        this.atual.proximo = noAux.proximo;
+        noAux.proximo.anterior = this.atual;
+        this.lista.tamanho--;
+    }
+
+    // Inserir antes do atual
+    public void inserirAntesAtual(int valor) {
+        No noAux = this.atual.anterior;
+        No no = new No(valor);
+        
+        no.anterior = this.atual;
+
+        if (noAux != null) {
+            no.anterior = noAux;
+            noAux.proximo = no;
+        }
+
+        this.atual.anterior = no;
+        this.lista.tamanho++;
+    }
+
+    // Remover após o atual
+    public void removerAntesAtual() {
+        No noAux = this.atual.anterior;
+
+        if (noAux == null) {
+            System.out.println("Nao ha nenhum no antes deste!");
+            return;
+        }
+
+        this.atual.anterior = noAux.anterior;
+        noAux.anterior.proximo = this.atual;
+        this.lista.tamanho--;
+    }
 }

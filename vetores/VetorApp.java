@@ -7,22 +7,36 @@ public class VetorApp {
     public static void main(String[] args) {
         Lista lista = new Lista();
         
-        lista.adicionarAoInicio(28);
+        lista.adicionarAoInicio(54);
+        lista.adicionarAoInicio(42);
+        lista.adicionarAoInicio(33);
         lista.adicionarAoInicio(27);
-        lista.adicionarAoInicio(24);
         lista.adicionarAoInicio(21);
-        lista.adicionarAoInicio(32);
+        lista.adicionarAoInicio(16);
         lista.adicionarAoInicio(12);
+        lista.adicionarAoInicio(9);
+        lista.adicionarAoInicio(7);
         lista.adicionarAoInicio(2);
 
-        //lista.remover(21);
-        //lista.mostrarNos();
+        // lista.remover(21);
         
-        //System.out.println("-----");
+        // lista.adicionarAoFinal(60);
+        // lista.numeroDeNos();
+        // System.out.println(lista.tamanho);
+        lista.inserirApos(54, 60);
+        
+        //lista.getIterador().inserirAposAtual(5);
+        //lista.getIterador().removerAposAtual();
+        //lista.getIterador().inserirAntesAtual(0);
+        //lista.getIterador().removerAntesAtual();
+
+        lista.mostrarNos();
+        
+        // System.out.println("-----");
+
 
         Vetor vetor = new Vetor(10);
 
-        //2, 7, 9, 12, 16, 21, 27, 33, 42, 54
         vetor.adicionar(2);
         vetor.adicionar(7);
         vetor.adicionar(9);
@@ -33,14 +47,11 @@ public class VetorApp {
         vetor.adicionar(33);
         vetor.adicionar(42);
         vetor.adicionar(54);
-        vetor.adicionar(59);
 
-        //vetor.mostrarElementos();
+        // vetor.prepend(0);
+        // vetor.buscaBinaria(54);
 
-        vetor.prepend(0);
+        // vetor.mostrarElementos();
 
-        vetor.mostrarElementos();
-
-        vetor.buscaBinaria(59);
     }
 }

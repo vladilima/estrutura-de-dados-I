@@ -21,6 +21,7 @@ public class Vetor {
         this.tamanho++;
     }
 
+    // Inserir no início do vetor
     public void prepend(Integer valor) {
         if (this.capacidade == this.tamanho) {
             this.aumentarCapacidade();
@@ -94,6 +95,7 @@ public class Vetor {
         System.out.println("Item não encontrado");
     }
 
+    // Busca binária pelo valor informado
     public Integer buscaBinaria(Integer valor) {
         int min = 0;
         int max = tamanho-1;
@@ -122,6 +124,7 @@ public class Vetor {
         System.out.println(min + " + " + max + " / 2 = " + target);
 
         System.out.println("Item encontrado!");
+        System.out.println("Local na lista: "+ target);
         return target;
     }
 }
